@@ -1,0 +1,115 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+.top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+    background: #eeeeee;
+    -webkit-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+}
+
+.photo {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    &::after {
+        content: '';
+        flex-grow: 999999999;
+    }
+}
+
+.photo__container {
+    margin: 4px;
+    position: relative;
+}
+
+.photo__image {
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    width: 100%;
+    vertical-align: bottom;
+    transition: all .1s;
+    &:hover {
+        transform: scale(1.05);
+        z-index: 9000;
+    }
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.form__button {
+    margin: 5px;
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    background-color:#007dc1;
+    border-radius:3px;
+    border:1px solid #124d77;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #154682;
+    &:hover {
+        background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+        background-color:#0061a7;
+    }
+    &:active {
+        position:relative;
+        top:1px;
+    }
+}
+  
+.form__input {
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+    border-width: 1px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 2px;
+    &:focus {
+        outline:none;
+        border-color: #AAAAAA;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .photo {
+        margin-top: 140px;
+    }
+
+    .top {
+        height: 100px;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+    
+    .form__input {
+        width: 215px;
+    }
+}
