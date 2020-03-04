@@ -20,5 +20,10 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Для запуска проекта необходимы установленные NodeJS и Yarn.
+
+- Распаковать проект в отдельную папку
+- Открыть терминал и перейти в папку проекта
+- Выполнить yarn install
+- Выполнить yarn serve
+
