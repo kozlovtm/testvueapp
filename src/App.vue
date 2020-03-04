@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="top">
-      <InputForm @clear="clear" @get="get"/>
+      <InputForm @clear="clear" @get="get" @load="load"/>
     </div>
     <div class="photo" >
       <ImageBlock v-for="(item, index) in items" v-bind:key="item.url + '-' + index" :item="item" />
@@ -25,6 +25,9 @@
       }
     },
     methods: {
+      load(evt) {
+        JSON.parse(evt).galleryImages.forEach(x => this.addImage(x));
+      },
       clear() {
         this.items = []
       },
